@@ -1,5 +1,5 @@
 class Task < ActiveRecord::Base
-	has_many :lists
+	belongs_to :list
 	scope :published, -> { where(published: true) }
 	scope :incomplete, -> { where(published: false) }
 end
